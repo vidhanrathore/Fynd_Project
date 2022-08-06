@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+
+}
+
+:root{
+    --my_font:'Poppins',sans-serif;
+    --light-white: #f5f8fa;
+    --gray:#5e6278;
+    --gray-1: #2853ffa1;
+}
+
+body {
+    font-family: var(--my_font);
+    font-size: 14px;
+    
+}
+
+/* ------------ Main css ---------- */
+.wrapper{
+    margin: 0;
+    padding: 0 0 100px;
+    opacity: 1;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100%;
+    min-width: 50%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    vertical-align: middle;
+    display: flex;
+  align-items: center;
+  justify-content: center;
+    /* align-items: center; */
+    
+}
+
+.block{
+    margin-left: auto;
+    margin-right: auto;
+    vertical-align: middle;
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 8%;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    vertical-align: middle;
+    /* display: flex; */
+  align-items: center;
+  justify-content: center;
+}
+
+.login_with{
+    /* align-items: left; */
+    text-align: justify;
+    font-size: 15px;
+}
+
+.login_with:hover{
+    /* background-color: var(--gray-1); */
+    background-color: rgb(220, 219, 219);
+    /* transform: scale(1.1,1); */
+    box-shadow: 0 0 10px;
+    border: 2px solid black;
+   
+}
+
+.login_with img {
+    width: 25px;
+}
+

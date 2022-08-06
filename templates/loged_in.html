@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Inside ATM</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+
+</head>
+<body>
+<!-----------------Navigation Bar------------------>
+<nav class="navbar navbar-expand-lg navbar-light bg-dark mb-3">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!----------------------ATM----------------------->
+    <a class="navbar-brand" style="color:white;" href="#">ATM</a>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+        <!----------------------home----------------------->
+        <li class="nav-item active">
+          <a class="nav-link active" style="color:white;" aria-current="page" href="/loged_in">Home</a>
+        </li>
+
+        <!----------------------sign-up ----------------------->
+        <li class="nav-item">
+          <a class="nav-link" style="color:white;" href="/signup">New Account</a>
+        </li>
+
+        <!----------------------LOGOUT ----------------------->
+        <li class="nav-item">
+          <a class="nav-link" style="color:white;" href="/logout">Logout</a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+<!----------------------------------------------------------------------------------------------------->
+
+<!------------------------------------------Alert----------------------------------->
+{% if msg %}
+<div class="alert alert-{{color}} alert-dismissible fade show" role="alert">
+  <strong>Hello {{name}}!</strong> {{msg}}.
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+{% endif %}
+
+<!--{% if first_time %}-->
+<!--<div class="alert alert-success alert-dismissible fade show" role="alert">-->
+<!--  <strong>Hello {{name}}!</strong> You are Successfully Login.-->
+<!--&lt;!&ndash;  <p style="color:red">{{msg}}</p>&ndash;&gt;-->
+
+<!--  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>-->
+<!--</div>-->
+<!--{% endif %}-->
+
+<!--{% if mini_statement %}-->
+<!--<div class="alert alert-success alert-dismissible fade show" role="alert">-->
+<!--  <strong>Hello {{name}}!</strong> You are Current Balance is {{amount}}.-->
+<!--  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>-->
+<!--</div>-->
+<!--{% endif %}-->
+
+<!--{% if updated %}-->
+<!--<div class="alert alert-success alert-dismissible fade show" role="alert">-->
+<!--  <strong>Great {{name}}!</strong> Your Balance is updated Successfully.-->
+<!--  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>-->
+<!--</div>-->
+<!--{% endif %}-->
+
+
+<!--------------------Functions Card New----------------------------->
+<div class="row row-cols-1 row-cols-md-2 g-4 mx-auto">
+
+<!--  ----------------Cash Withdrawal Card 1--------------->
+  <a href="/cash_withdrawal" style="text-decoration:none;">
+    <div class="col">
+      <div class="card text-dark bg-danger">
+        <div class="card-body">
+          <h5 class="card-title">Cash Withdrawal</h5>
+        </div>
+      </div>
+    </div>
+  </a>
+
+
+  <!------------ Cash Deposit ------>
+  <a href="/cash_deposit" style="text-decoration:none;">
+    <div class="col">
+      <div class="card text-dark bg-success">
+        <div class="card-body">
+          <h5 class="card-title">Cash Deposit</h5>
+        </div>
+      </div>
+    </div>
+  </a>
+
+
+  <!--  ----------Admin------->
+  <a href="/admin" style="text-decoration:none;">
+    <div class="col">
+      <div class="card text-dark bg-warning">
+        <div class="card-body">
+          <h5 class="card-title">Admin</h5>
+        </div>
+      </div>
+    </div>
+  </a>
+
+
+    <!--  ----------Mini Statement------->
+  <a href="/mini_statement" style="text-decoration:none;">
+    <div class="col">
+      <div class="card text-dark bg-info">
+        <div class="card-body">
+          <h5 class="card-title">Mini Statement</h5>
+        </div>
+      </div>
+    </div>
+  </a>
+
+</div>
+
+</body>
+</html>
